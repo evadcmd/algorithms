@@ -26,7 +26,6 @@ func span(buf *bytes.Buffer, status, count int, list *[]string) {
 
 func generateParenthesis(n int) []string {
 	list := []string{}
-	buf := bytes.NewBufferString("(")
-	span(buf, 1, n-1, &list)
+	span(new(bytes.Buffer), 0, n, &list)
 	return list
 }
