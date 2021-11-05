@@ -5,8 +5,7 @@
 // Then we can span the tree recursively.
 package main
 
-import "bytes"
-
+/* [TODO] read the python sample and create a golang version
 func span(buf *bytes.Buffer, status, count int, list *[]string) {
 	if status == 0 && count == 0 {
 		*list = append(*list, buf.String())
@@ -24,9 +23,11 @@ func span(buf *bytes.Buffer, status, count int, list *[]string) {
 	}
 }
 
+
 func generateParenthesis(n int) []string {
 	list := []string{}
-	// span(bytes.NewBuffer(make([]byte, 0, n*2)), 0, n, &list)
-	span(new(bytes.Buffer), 0, n, &list)
+	buf := bytes.NewBufferString("(")
+	span(buf, 1, n-1, &list)
 	return list
 }
+*/
