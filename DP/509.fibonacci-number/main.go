@@ -8,12 +8,11 @@ func fib(n int) int {
 	}
 	a, b := 0, 1
 	for n--; n > 0; n-- {
-		b += a
-		a = b - a
+		a, b = b, a+b
 	}
 	return b
 }
 
 func main() {
-	fmt.Println(fib(4))
+	fmt.Println(fib(5))
 }
